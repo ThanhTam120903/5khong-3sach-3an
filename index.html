@@ -30,6 +30,22 @@ h1{font-size:30px;line-height:1.12;margin:12px 0;color:#173b82}
 .button{display:block;text-align:center;text-decoration:none;margin-top:12px;padding:13px 16px;border-radius:10px;background:#1259a6;color:white;font-weight:bold}
 .footer{padding:20px;text-align:center;background:#103b7c;color:#fff;font-size:14px}
 .small{font-size:14px;color:#596574}
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 10;
+}
+
+.button {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
 </style>
 </head>
 <body>
@@ -90,7 +106,7 @@ Hãy đọc các tiêu chí trên và chuẩn bị thông tin hộ gia đình đ
 <h3>📄 PHIẾU ĐĂNG KÝ</h3>
 <p>Phiếu gồm thông tin chủ hộ và các nội dung đăng ký: 5 Không, 3 Sạch và 3 An.</p>
 <p class="small">Khi trang được đưa lên Internet, nút bên dưới sẽ được gắn trực tiếp với file phiếu đăng ký.</p>
-<a class="button" href="phieuDangKy.png" download="Phieu-Dang-Ky-5-Khong-3-Sach-3-An.png">
+<a class="button" href="./phieuDangKy.png" download="Phieu-Dang-Ky-5-Khong-3-Sach-3-An.png">
     ⬇️ TẢI PHIẾU ĐĂNG KÝ
 </a>
 </div>
