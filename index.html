@@ -5,126 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gia đình 5 Không – 3 Sạch – 3 An</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f8fb;color:#17233d;line-height:1.55}
-.container{max-width:760px;margin:auto;background:#fff;min-height:100vh}
-.hero{padding:24px 18px 20px;text-align:center;background:linear-gradient(135deg,#eaf7ff,#fff)}
-.logo{font-weight:700;color:#07559b;font-size:16px}
-h1{font-size:30px;line-height:1.12;margin:12px 0;color:#173b82}
-.subtitle{font-size:17px;font-weight:700;color:#175d9f}
-.lead{padding:16px 18px;text-align:center;background:#eef8ff}
-.section{margin:16px;border-radius:16px;overflow:hidden;border:1px solid #dbe4ee}
-.section h2{margin:0;padding:12px 16px;color:#fff;font-size:22px}
-.red h2{background:#d92323}.green h2{background:#197b35}.blue h2{background:#1454a0}
-.items{padding:8px 16px 14px}
-.item{padding:11px 0;border-bottom:1px solid #edf0f4}
-.item:last-child{border-bottom:0}
-.item strong{display:block;font-size:18px}
-.item p{margin:4px 0 0;color:#444}
-.note{margin:16px;padding:16px;border-radius:14px;background:#fff8df;border-left:5px solid #e0a800}
-.register{margin:16px;padding:18px;border-radius:16px;background:#eef8f0;border:1px solid #b9dcbc}
-.register h2{margin:0 0 10px;color:#17652c}
-.step{display:flex;gap:10px;margin:10px 0}
-.num{min-width:30px;height:30px;border-radius:50%;background:#17652c;color:white;text-align:center;padding-top:3px;font-weight:bold}
-.card{margin:16px;padding:18px;border-radius:16px;background:#f7fbff;border:1px solid #cbdced}
-.button{display:block;text-align:center;text-decoration:none;margin-top:12px;padding:13px 16px;border-radius:10px;background:#1259a6;color:white;font-weight:bold}
-.footer{padding:20px;text-align:center;background:#103b7c;color:#fff;font-size:14px}
-.small{font-size:14px;color:#596574}
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
-    z-index: 10;
-}
-
-.button {
-    position: relative;
-    z-index: 10;
-    display: inline-block;
-    cursor: pointer;
-    pointer-events: auto;
-    touch-action: manipulation;
-}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef5fa;color:#17233d;font-family:Arial,Helvetica,sans-serif;line-height:1.5}.page{width:min(1180px,100%);margin:auto;background:#fff;overflow:hidden;box-shadow:0 0 30px rgba(25,80,130,.12)}
+.header{padding:16px 34px 0;background:#fff}.header-top{min-height:105px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{width:410px;max-width:55%;display:block}.nav{display:flex;gap:28px;align-items:center}.nav a{color:#0759ad;font-size:12px;font-weight:800;text-align:center}.nav-icon{width:35px;height:35px;display:block;margin:auto auto 3px;fill:#0759ad}.header-wave{height:38px;position:relative;overflow:hidden;margin:0 -34px}.header-wave:after{content:"";position:absolute;left:-5%;top:-35px;width:110%;height:70px;border-radius:50%;background:#eaf6ff}
+.hero{min-height:430px;padding:35px 45px 10px;display:grid;grid-template-columns:47% 53%;align-items:center;position:relative;overflow:hidden;background:linear-gradient(115deg,#eef9ff,#fff 55%,#e5f5ff)}.hero:before{content:"";position:absolute;left:-8%;bottom:-95px;width:116%;height:160px;background:#d7efff;border-radius:50%}.hero-left{position:relative;z-index:2}.kicker{margin:0 0 4px;color:#1264b0;font-size:25px;font-weight:900}.title{margin:0;color:#0759aa;font-size:58px;line-height:.98;font-weight:900;letter-spacing:-1px}.title span{display:block}.subtitle{max-width:500px;margin:20px 0;color:#1164b3;font-size:21px;line-height:1.3;font-style:italic;font-weight:700}.hero-btn{display:inline-flex;padding:14px 30px;border-radius:40px;background:linear-gradient(90deg,#0879d8,#0870c7);color:#fff;font-size:18px;font-weight:900;box-shadow:0 8px 18px #0780d52e}.family{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:flex-end}.family img{width:100%;max-width:610px;display:block;object-fit:contain}.wave{height:38px;background:linear-gradient(#159be4,#0781d5);position:relative}.wave:before{content:"";position:absolute;left:-5%;top:-33px;width:110%;height:65px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
+.heading{text-align:center;padding:22px 20px 14px}.heading h2{margin:0;color:#0759a8;font-size:28px}.heading h2:before,.heading h2:after{content:"";display:inline-block;width:90px;height:1px;background:#8bbce5;margin:0 14px 8px}
+.criteria{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:0 24px 18px}.box{border:1px solid #d6e3ee;border-radius:18px;overflow:hidden;background:#fff}.boxhead{padding:13px 15px;display:flex;align-items:center;gap:12px;color:#fff}.boxhead .num{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;font-size:30px;font-weight:900;box-shadow:0 0 0 2px currentColor}.boxhead h3{margin:0;font-size:24px;line-height:1}.boxhead small{font-size:11px;font-weight:800}.five{background:linear-gradient(#eef8ff,#fff)}.five .boxhead{background:linear-gradient(90deg,#0872c9,#1768b5)}.five .num{color:#0872c9}.clean{background:linear-gradient(#f0fbf4,#fff)}.clean .boxhead{background:linear-gradient(90deg,#15964f,#0b7f42)}.clean .num{color:#15964f}.safe{background:linear-gradient(#f5f7ff,#fff)}.safe .boxhead{background:linear-gradient(90deg,#405fc7,#394fb1)}.safe .num{color:#405fc7}.items{padding:2px 17px 10px}.item{padding:12px 0;border-bottom:1px dashed #d7e1eb}.item:last-child{border-bottom:0}.item strong{display:block;font-size:15px;line-height:1.3}.item p{margin:5px 0 0;color:#465365;font-size:12.5px;line-height:1.45}
+.register{margin:8px 24px 22px;padding:22px 25px;border-radius:20px;border:1px solid #c4e0f5;background:linear-gradient(105deg,#eff9ff,#f8fcff)}.register h2{margin:0 0 22px;text-align:center;color:#075caf;font-size:28px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.step{text-align:center;position:relative;padding:0 8px}.step:not(:last-child):after{content:"➜";position:absolute;right:-11px;top:30px;color:#147bd1;font-size:22px}.step .n{width:56px;height:56px;margin:auto auto 8px;border-radius:50%;border:2px solid #78b9e9;background:#fff;color:#075caf;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}.step p{margin:0;font-size:12.5px;line-height:1.45}.step strong{color:#075caf}
+.actions{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin:0 24px 25px}.card{padding:18px;border-radius:18px;border:1px solid #c9dfef;background:#f7fbff;min-height:145px}.card h3{margin:0 0 8px;color:#075db2;font-size:19px}.card p{margin:0;color:#465567;font-size:13px}.card.green{background:#f4fbf7;border-color:#b9dfc7}.card.green h3{color:#15854a}.btn{display:flex;justify-content:center;align-items:center;margin-top:13px;padding:11px;border-radius:12px;background:#075db5;color:#fff;font-weight:800}.green .btn{background:#16924f}.footer{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;align-items:center;padding:22px 34px;color:#fff;background:linear-gradient(110deg,#0758ad,#0878d2);font-size:13px}.footer strong{font-size:16px}.footer p{margin:3px 0}.footer .info{display:flex;gap:8px;align-items:center}.icon{font-size:23px}
+@media(max-width:900px){.header{padding:14px 20px 0}.header-wave{margin:0 -20px}.logo{width:330px}.nav{gap:12px}.nav a{font-size:9px}.nav-icon{width:28px;height:28px}.hero{grid-template-columns:1fr;padding:28px 25px 0;text-align:center}.kicker{font-size:21px}.title{font-size:48px}.subtitle{margin:15px auto 20px;font-size:18px}.family{justify-content:center}.criteria{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step:nth-child(2):after{display:none}.actions{grid-template-columns:1fr 1fr}.actions .card:first-child{grid-column:1/-1}.footer{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.header-top{display:block}.logo{max-width:360px;width:100%;margin:auto}.nav{justify-content:center;margin-top:10px}.hero{padding:23px 15px 0}.kicker{font-size:18px}.title{font-size:39px}.subtitle{font-size:16px}.hero-btn{width:100%;max-width:300px;justify-content:center;font-size:16px}.heading h2{font-size:21px}.heading h2:before,.heading h2:after{width:30px;margin:0 6px 6px}.criteria{padding:0 13px 15px}.register{margin:8px 13px 18px;padding:18px 12px}.register h2{font-size:23px}.steps{grid-template-columns:1fr}.step:not(:last-child):after{display:none}.actions{grid-template-columns:1fr;margin:0 13px 18px}.actions .card:first-child{grid-column:auto}.footer{grid-template-columns:1fr;text-align:center;padding:22px 18px}.footer .info{justify-content:center}}
 </style>
 </head>
 <body>
-<div class="container">
-<header class="hero">
-  <div class="logo">HỘI LHPN TỈNH ĐỒNG THÁP<br>HỘI LHPN XÃ PHÚ HỰU</div>
-  <h1>XÂY DỰNG GIA ĐÌNH<br>5 KHÔNG – 3 SẠCH – 3 AN</h1>
-  <div class="subtitle">Vì một cộng đồng hạnh phúc – văn minh – an toàn – phát triển bền vững</div>
-</header>
-
-<div class="lead">
-  Gia đình đăng ký thực hiện các tiêu chí xây dựng gia đình hạnh phúc, văn minh, an toàn và phát triển bền vững.
-</div>
-
-<section class="section red">
-<h2>5 KHÔNG – Nền tảng hạnh phúc</h2>
-<div class="items">
+<div class="page">
+<header class="header">
+<div class="header-top">
+<img class="logo" src="./logo.png" alt="HỘI LHPN TỈNH ĐỒNG THÁP - HỘI LHPN XÃ PHÚ HỰU">
+<nav class="nav">
+<a href="#"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 11.2 12 3l9 8.2v9.3a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 20.5v-9.3Z"/></svg>TRANG CHỦ</a>
+<a href="#gioi-thieu"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm2.1-7.1-.9.9c-.8.7-1.2 1.2-1.2 2.2h-2c0-1.5.5-2.3 1.7-3.4l.8-.8c.4-.4.7-.8.7-1.4A2.2 2.2 0 0 0 12 5.2c-1.2 0-2 .8-2.2 1.9l-1.9-.4C8.2 4.8 9.7 3.3 12 3.3c2.3 0 4.2 1.6 4.2 4 0 1.1-.4 1.9-1.1 2.6Z"/></svg>GIỚI THIỆU</a>
+<a href="#tai-lieu"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V8h4.5M8 11h8M8 14h8M8 17h6"/></svg>TÀI LIỆU</a>
+<a href="#lien-he"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M6.6 2.8 9 2l2.2 5.3-2.1 1.5a15.5 15.5 0 0 0 6.1 6.1l1.5-2.1L22 15l-.8 2.4c-.5 1.5-1.9 2.5-3.5 2.5C10.6 19.9 4.1 13.4 4.1 6.3c0-1.6 1-3 2.5-3.5Z"/></svg>LIÊN HỆ</a>
+</nav></div><div class="header-wave"></div></header>
+<section class="hero" id="gioi-thieu"><div class="hero-left"><p class="kicker">XÂY DỰNG GIA ĐÌNH</p><h1 class="title"><span>5 KHÔNG</span><span>3 SẠCH – 3 AN</span></h1><p class="subtitle">Vì một cộng đồng hạnh phúc – văn minh – an toàn – phát triển bền vững</p><a class="hero-btn" href="https://docs.google.com/forms/d/1d1IAJc6JraDkRRKymnHo1WyF4o-G49KTRBBlNvNZg_A/viewform" target="_blank">✍️ ĐĂNG KÝ NGAY</a></div><div class="family"><img src="./family.png" alt="Gia đình hạnh phúc"></div></section><div class="wave"></div>
+<div class="heading"><h2>5 KHÔNG – 3 SẠCH – 3 AN</h2></div>
+<section class="criteria">
+<article class="box five"><div class="boxhead"><div class="num">5</div><div><h3>KHÔNG</h3><small>NỀN TẢNG HẠNH PHÚC</small></div></div><div class="items">
 <div class="item"><strong>1. Không nghèo</strong><p>Có ý chí vươn lên thoát nghèo, nâng cao mức sống, sử dụng hợp lý các nguồn lực, không trông chờ, ỷ lại.</p></div>
 <div class="item"><strong>2. Không bạo lực</strong><p>Các thành viên yêu thương, tôn trọng, chia sẻ, không có bất kỳ hành vi bạo lực gia đình và lời nói thô tục.</p></div>
 <div class="item"><strong>3. Không vi phạm pháp luật và tệ nạn xã hội</strong><p>Chấp hành nghiêm chủ trương của Đảng, chính sách pháp luật của Nhà nước; không tham gia và tệ nạn xã hội, cờ bạc hoặc các tệ nạn xã hội khác.</p></div>
 <div class="item"><strong>4. Không trẻ suy dinh dưỡng và bỏ học</strong><p>Trẻ em được đến trường đúng độ tuổi, được theo dõi tăng trưởng định kỳ, không để trẻ em bỏ học hoặc bỏ học phí.</p></div>
-<div class="item"><strong>5. Không lãng phí</strong><p>Thực hành tiết kiệm điện, nước, thực phẩm và thời gian; tiết kiệm là điều kiện và sử dụng thực phẩm hợp lý.</p></div>
-</div>
-</section>
-
-<section class="section green">
-<h2>3 SẠCH – Môi trường sống trong lành</h2>
-<div class="items">
+<div class="item"><strong>5. Không lãng phí</strong><p>Thực hành tiết kiệm điện, nước, thực phẩm và thời gian; tiết kiệm là điều kiện và sử dụng thực phẩm hợp lý.</p></div></div></article>
+<article class="box clean"><div class="boxhead"><div class="num">3</div><div><h3>SẠCH</h3><small>MÔI TRƯỜNG SỐNG TRONG LÀNH</small></div></div><div class="items">
 <div class="item"><strong>1. Sạch nhà</strong><p>Nhà ở sạch sẽ, gọn gàng, có nhà tắm, nhà tiêu và công trình nước sinh hoạt hợp vệ sinh.</p></div>
 <div class="item"><strong>2. Sạch bếp</strong><p>Khu vực nấu nướng sạch sẽ, thông thoáng; sử dụng thực phẩm an toàn; có nguồn gốc rõ ràng và ăn chín uống sôi.</p></div>
-<div class="item"><strong>3. Sạch ngõ</strong><p>Giữ gìn vệ sinh chung; không để rác thải và nước đọng thường xuyên; xanh – sạch – đẹp, quang sáng – xanh – sạch – đẹp.</p></div>
-</div>
-</section>
-
-<section class="section blue">
-<h2>3 AN – An tâm vững bước</h2>
-<div class="items">
+<div class="item"><strong>3. Sạch ngõ</strong><p>Giữ gìn vệ sinh chung; không để rác thải và nước đọng thường xuyên; xanh – sạch – đẹp, quang sáng – xanh – sạch – đẹp.</p></div></div></article>
+<article class="box safe"><div class="boxhead"><div class="num">3</div><div><h3>AN</h3><small>AN TÂM VỮNG BƯỚC</small></div></div><div class="items">
 <div class="item"><strong>1. An toàn</strong><p>Đảm bảo an toàn PCCC, an toàn điện; trang bị kỹ năng phòng chống đuối nước và an toàn giao thông; giữ gìn an ninh trật tự, không gian mạng.</p></div>
 <div class="item"><strong>2. An tâm</strong><p>Gia đình hòa thuận; có thu nhập ổn định và tích cực tham gia các phong trào, quy ước tốt của địa phương.</p></div>
-<div class="item"><strong>3. An sinh</strong><p>Tham gia bảo hiểm y tế, bảo hiểm tự nguyện; thành viên được chăm sóc sức khỏe định kỳ.</p></div>
-</div>
+<div class="item"><strong>3. An sinh</strong><p>Tham gia bảo hiểm y tế, bảo hiểm tự nguyện; thành viên được chăm sóc sức khỏe định kỳ.</p></div></div></article>
 </section>
-
-<div class="note">
-<strong>📌 Bạn muốn đăng ký thực hiện?</strong><br>
-Hãy đọc các tiêu chí trên và chuẩn bị thông tin hộ gia đình để đăng ký với Chi hội/Hội LHPN địa phương.
-</div>
-
-<section class="register">
-<h2>📝 CÁCH ĐĂNG KÝ</h2>
-<div class="step"><div class="num">1</div><div>Đọc và tìm hiểu các tiêu chí <strong>5 Không – 3 Sạch – 3 An</strong>.</div></div>
-<div class="step"><div class="num">2</div><div>Chuẩn bị thông tin: họ tên chủ hộ, địa chỉ, tổ dân phố/ấp/khu phố, xã/phường và số điện thoại.</div></div>
-<div class="step"><div class="num">3</div><div>Điền <strong>Phiếu đăng ký thực hiện mô hình Gia đình 5 Không – 3 Sạch – 3 An</strong>.</div></div>
-<div class="step"><div class="num">4</div><div>Gửi phiếu cho <strong>Chi hội/Hội LHPN địa phương</strong> để tiếp nhận và tổng hợp.</div></div>
-</section>
-
-<div class="card">
-<h3>📄 PHIẾU ĐĂNG KÝ</h3>
-<p>Phiếu gồm thông tin chủ hộ và các nội dung đăng ký: 5 Không, 3 Sạch và 3 An.</p>
-<p class="small">Khi trang được đưa lên Internet, nút bên dưới sẽ được gắn trực tiếp với file phiếu đăng ký.</p>
-<a class="button" href="./phieuDangKy.png" download="Phieu-Dang-Ky-5-Khong-3-Sach-3-An.png">
-    ⬇️ TẢI PHIẾU ĐĂNG KÝ
-</a>
-</div>
-
-<div class="card">
-<h3>✍️ ĐĂNG KÝ TRỰC TUYẾN</h3>
-<p class="small">Có thể bổ sung biểu mẫu trực tuyến để người dân đăng ký ngay trên điện thoại.</p>
-<a class="button"
-   href="https://docs.google.com/forms/d/1d1IAJc6JraDkRRKymnHo1WyF4o-G49KTRBBlNvNZg_A/viewform"
-   target="_blank">
-    ✍️ ĐĂNG KÝ NGAY
-</a>
-</div>
-
-<footer class="footer">
-<strong>GIA ĐÌNH HẠNH PHÚC – CỘNG ĐỒNG VĂN MINH</strong><br>
-Xây dựng cộng đồng văn minh, phát triển bền vững.
-</footer>
-</div>
-</body>
-</html>
+<section class="register" id="tai-lieu"><h2>CÁCH ĐĂNG KÝ</h2><div class="steps">
+<div class="step"><div class="n">1</div><p>Đọc và tìm hiểu các tiêu chí <strong>5 Không – 3 Sạch – 3 An</strong>.</p></div>
+<div class="step"><div class="n">2</div><p>Chuẩn bị thông tin: họ tên chủ hộ, địa chỉ, tổ dân phố/ấp/khu phố, xã/phường và số điện thoại.</p></div>
+<div class="step"><div class="n">3</div><p>Điền <strong>Phiếu đăng ký thực hiện mô hình Gia đình 5 Không – 3 Sạch – 3 An</strong>.</p></div>
+<div class="step"><div class="n">4</div><p>Gửi phiếu cho <strong>Chi hội/Hội LHPN địa phương</strong> để tiếp nhận và tổng hợp.</p></div></div></section>
+<section class="actions"><div class="card"><h3>📌 BẠN MUỐN ĐĂNG KÝ THỰC HIỆN?</h3><p>Hãy đọc các tiêu chí trên và chuẩn bị thông tin hộ gia đình để đăng ký với Chi hội/Hội LHPN địa phương.</p></div><div class="card"><h3>📄 TẢI PHIẾU ĐĂNG KÝ</h3><p>Phiếu gồm thông tin chủ hộ và các nội dung đăng ký: 5 Không, 3 Sạch và 3 An.</p><a class="btn" href="./phieuDangKy.png" download="Phieu-Dang-Ky-5-Khong-3-Sach-3-An.png">⬇️ TẢI PHIẾU</a></div><div class="card green"><h3>✍️ ĐĂNG KÝ NGAY</h3><p>Có thể bổ sung biểu mẫu trực tuyến để người dân đăng ký ngay trên điện thoại.</p><a class="btn" href="https://docs.google.com/forms/d/1d1IAJc6JraDkRRKymnHo1WyF4o-G49KTRBBlNvNZg_A/viewform" target="_blank">✍️ ĐĂNG KÝ NGAY</a></div></section>
+<footer class="footer" id="lien-he"><div><strong>🌸 GIA ĐÌNH HẠNH PHÚC – CỘNG ĐỒNG VĂN MINH</strong><p>Xây dựng cộng đồng văn minh, phát triển bền vững.</p></div><div class="info"><span class="icon">📍</span><span>Hội LHPN xã Phú Hựu<br>huyện Châu Thành, tỉnh Đồng Tháp</span></div><div class="info"><span class="icon">☎</span><span>0277 3 123 456</span></div></footer>
+</div></body></html>
