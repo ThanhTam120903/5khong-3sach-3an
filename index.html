@@ -6,7 +6,106 @@
 <title>Gia đình 5 Không – 3 Sạch – 3 An</title>
 <style>
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef5fa;color:#17233d;font-family:Arial,Helvetica,sans-serif;line-height:1.5}.page{width:min(1180px,100%);margin:auto;background:#fff;overflow:hidden;box-shadow:0 0 30px rgba(25,80,130,.12)}
-.header{padding:16px 34px 0;background:#fff}.header-top{min-height:105px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{width:410px;max-width:55%;display:block}.nav{display:flex;gap:28px;align-items:center}.nav a{color:#0759ad;font-size:12px;font-weight:800;text-align:center}.nav-icon{width:35px;height:35px;display:block;margin:auto auto 3px;fill:#0759ad}.header-wave{height:38px;position:relative;overflow:hidden;margin:0 -34px}.header-wave:after{content:"";position:absolute;left:-5%;top:-35px;width:110%;height:70px;border-radius:50%;background:#eaf6ff}
+.header{
+  padding:0 34px;
+  background:#fff;
+  border-bottom:1px solid #e3eef7;
+}
+
+.header-top{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  min-width:0;
+}
+
+.logo{
+  width:78px;
+  height:78px;
+  flex:0 0 78px;
+  object-fit:contain;
+  display:block;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  gap:5px;
+  color:#0759ad;
+  line-height:1.12;
+  white-space:nowrap;
+}
+
+.brand-text strong{
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:.2px;
+}
+
+.brand-text span{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:.2px;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:24px;
+  flex-shrink:0;
+}
+
+.nav a{
+  min-width:64px;
+  color:#0759ad;
+  font-size:11px;
+  font-weight:800;
+  text-align:center;
+  text-decoration:none;
+  transition:.2s ease;
+}
+
+.nav a:hover{
+  color:#0879d8;
+  transform:translateY(-2px);
+}
+
+.nav-icon{
+  width:30px;
+  height:30px;
+  display:block;
+  margin:0 auto 5px;
+  fill:#0759ad;
+}
+
+.header-wave{
+  height:14px;
+  position:relative;
+  overflow:hidden;
+  margin:0 -34px;
+}
+
+.header-wave:after{
+  content:"";
+  position:absolute;
+  left:-5%;
+  top:-27px;
+  width:110%;
+  height:50px;
+  border-radius:50%;
+  background:#eaf6ff;
+}
 .hero{min-height:430px;padding:35px 45px 10px;display:grid;grid-template-columns:47% 53%;align-items:center;position:relative;overflow:hidden;background:linear-gradient(115deg,#eef9ff,#fff 55%,#e5f5ff)}.hero:before{content:"";position:absolute;left:-8%;bottom:-95px;width:116%;height:160px;background:#d7efff;border-radius:50%}.hero-left{position:relative;z-index:2}.kicker{margin:0 0 4px;color:#1264b0;font-size:25px;font-weight:900}.title{margin:0;color:#0759aa;font-size:58px;line-height:.98;font-weight:900;letter-spacing:-1px}.title span{display:block}.subtitle{max-width:500px;margin:20px 0;color:#1164b3;font-size:21px;line-height:1.3;font-style:italic;font-weight:700}.hero-btn{display:inline-flex;padding:14px 30px;border-radius:40px;background:linear-gradient(90deg,#0879d8,#0870c7);color:#fff;font-size:18px;font-weight:900;box-shadow:0 8px 18px #0780d52e}.family{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:flex-end}.family img{width:100%;max-width:610px;display:block;object-fit:contain}.wave{height:38px;background:linear-gradient(#159be4,#0781d5);position:relative}.wave:before{content:"";position:absolute;left:-5%;top:-33px;width:110%;height:65px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
 .heading{text-align:center;padding:22px 20px 14px}.heading h2{margin:0;color:#0759a8;font-size:28px}.heading h2:before,.heading h2:after{content:"";display:inline-block;width:90px;height:1px;background:#8bbce5;margin:0 14px 8px}
 .criteria{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:0 24px 18px}.box{border:1px solid #d6e3ee;border-radius:18px;overflow:hidden;background:#fff}.boxhead{padding:13px 15px;display:flex;align-items:center;gap:12px;color:#fff}.boxhead .num{width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;font-size:30px;font-weight:900;box-shadow:0 0 0 2px currentColor}.boxhead h3{margin:0;font-size:24px;line-height:1}.boxhead small{font-size:11px;font-weight:800}.five{background:linear-gradient(#eef8ff,#fff)}.five .boxhead{background:linear-gradient(90deg,#0872c9,#1768b5)}.five .num{color:#0872c9}.clean{background:linear-gradient(#f0fbf4,#fff)}.clean .boxhead{background:linear-gradient(90deg,#15964f,#0b7f42)}.clean .num{color:#15964f}.safe{background:linear-gradient(#f5f7ff,#fff)}.safe .boxhead{background:linear-gradient(90deg,#405fc7,#394fb1)}.safe .num{color:#405fc7}.items{padding:2px 17px 10px}.item{padding:12px 0;border-bottom:1px dashed #d7e1eb}.item:last-child{border-bottom:0}.item strong{display:block;font-size:15px;line-height:1.3}.item p{margin:5px 0 0;color:#465365;font-size:12.5px;line-height:1.45}
