@@ -875,6 +875,23 @@ body{
     font-size:23px;
 }
 
+.phone-link{
+    color:#FFD43B;
+    text-decoration:none;
+    font-weight:900;
+    font-size:17px;
+    transition:.2s ease;
+}
+
+.phone-link:hover{
+    color:#FFE873;
+    text-decoration:underline;
+}
+
+.phone-link:active{
+    transform:scale(.98);
+}
+
 
 /* =========================================================
    TABLET
@@ -1772,16 +1789,11 @@ body{
 
 
     <div class="info">
-
-        <span class="icon">
-            ☎
-        </span>
-
-        <span>
-            0912 405 878
-        </span>
-
-    </div>
+    <span class="icon">☎</span>
+    <a href="tel:0912405878" class="phone-link">
+        0912 405 878
+    </a>
+</div>
 
 
 </footer>
