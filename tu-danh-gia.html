@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tự đánh giá Gia đình 5 Không – 3 Sạch – 3 An</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    margin:0;
+    background:#eef5fa;
+    color:#17233d;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.5;
+}
+.page{
+    width:min(1180px,100%);
+    margin:auto;
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(25,80,130,.12);
+}
+
+/* HEADER */
+.header{
+    background:#fff;
+    border-bottom:1px solid #dcecf7;
+}
+.header-top{
+    min-height:125px;
+    padding:18px 38px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-shrink:0;
+}
+.logo{
+    width:92px!important;
+    height:92px!important;
+    min-width:92px;
+    object-fit:contain;
+}
+.brand-text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:7px;
+    color:#0759ad;
+    line-height:1.15;
+    white-space:nowrap;
+}
+.brand-text strong{font-size:21px;font-weight:900}
+.brand-text span{font-size:20px;font-weight:900}
+
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+}
+.nav a{
+    width:78px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    color:#0759ad;
+    font-size:12px;
+    font-weight:800;
+    text-align:center;
+    text-decoration:none;
+    transition:.2s;
+}
+.nav a:hover{color:#0879d8;transform:translateY(-3px)}
+.nav-icon{
+    width:32px;height:32px;
+    fill:#0759ad;stroke:#0759ad;
+}
+.header-wave{
+    height:18px;
+    position:relative;
+    overflow:hidden;
+    background:#eaf6ff;
+}
+.header-wave:after{
+    content:"";
+    position:absolute;
+    left:-5%;top:-32px;
+    width:110%;height:55px;
+    border-radius:50%;
+    background:#fff;
+}
+
+/* HERO */
+.hero{
+    min-height:420px;
+    padding:42px 45px 20px;
+    display:grid;
+    grid-template-columns:52% 48%;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(115deg,#eef9ff,#fff 55%,#e5f5ff);
+}
+.hero:before{
+    content:"";
+    position:absolute;
+    left:-8%;bottom:-95px;
+    width:116%;height:160px;
+    background:#d7efff;
+    border-radius:50%;
+}
+.hero-left{position:relative;z-index:2}
+.kicker{
+    margin:0 0 6px;
+    color:#1264b0;
+    font-size:23px;
+    font-weight:900;
+}
+.title{
+    margin:0;
+    color:#0759aa;
+    font-size:54px;
+    line-height:1;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+.title span{display:block}
+.subtitle{
+    max-width:570px;
+    margin:20px 0;
+    color:#1164b3;
+    font-size:20px;
+    line-height:1.35;
+    font-style:italic;
+    font-weight:700;
+}
+.hero-note{
+    max-width:570px;
+    margin:0 0 22px;
+    padding:12px 16px;
+    border-left:4px solid #159be4;
+    border-radius:10px;
+    background:rgba(255,255,255,.75);
+    color:#40546c;
+    font-size:14px;
+}
+.hero-btn{
+    display:inline-flex;
+    padding:15px 30px;
+    border-radius:40px;
+    background:linear-gradient(90deg,#0879d8,#0870c7);
+    color:#fff;
+    font-size:18px;
+    font-weight:900;
+    text-decoration:none;
+    box-shadow:0 8px 18px rgba(7,128,213,.18);
+    transition:.2s;
+}
+.hero-btn:hover{transform:translateY(-2px)}
+.family{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-end;
+}
+.family img{
+    width:100%;
+    max-width:570px;
+    display:block;
+    object-fit:contain;
+}
+
+/* WAVE */
+.wave{
+    height:38px;
+    background:linear-gradient(#159be4,#0781d5);
+    position:relative;
+}
+.wave:before{
+    content:"";
+    position:absolute;
+    left:-5%;top:-33px;
+    width:110%;height:65px;
+    background:#fff;
+    border-radius:50% 50% 0 0/100% 100% 0 0;
+}
+
+/* TITLE */
+.heading{
+    text-align:center;
+    padding:22px 20px 14px;
+}
+.heading h2{
+    margin:0;
+    color:#0759a8;
+    font-size:28px;
+}
+.heading h2:before,.heading h2:after{
+    content:"";
+    display:inline-block;
+    width:90px;height:1px;
+    background:#8bbce5;
+    margin:0 14px 8px;
+}
+
+/* CRITERIA */
+.criteria{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:14px;
+    padding:0 24px 20px;
+}
+.box{
+    border:1px solid #d6e3ee;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+}
+.boxhead{
+    padding:13px 15px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+}
+.boxhead .num{
+    width:55px;height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    font-size:30px;
+    font-weight:900;
+}
+.boxhead h3{margin:0;font-size:24px;line-height:1}
+.boxhead small{font-size:11px;font-weight:800}
+.five{background:linear-gradient(#eef8ff,#fff)}
+.five .boxhead{background:linear-gradient(90deg,#0872c9,#1768b5)}
+.five .num{color:#0872c9}
+.clean{background:linear-gradient(#f0fbf4,#fff)}
+.clean .boxhead{background:linear-gradient(90deg,#15964f,#0b7f42)}
+.clean .num{color:#15964f}
+.safe{background:linear-gradient(#f5f7ff,#fff)}
+.safe .boxhead{background:linear-gradient(90deg,#405fc7,#394fb1)}
+.safe .num{color:#405fc7}
+.items{padding:2px 17px 10px}
+.item{
+    padding:12px 0;
+    border-bottom:1px dashed #d7e1eb;
+}
+.item:last-child{border-bottom:0}
+.item strong{
+    display:block;
+    font-size:15px;
+    line-height:1.3;
+}
+.item p{
+    margin:5px 0 0;
+    color:#465365;
+    font-size:12.5px;
+    line-height:1.45;
+}
+
+/* SELF ASSESSMENT */
+.assessment{
+    margin:8px 24px 22px;
+    padding:28px 28px 25px;
+    border-radius:22px;
+    border:1px solid #bcdcf2;
+    background:linear-gradient(120deg,#eef9ff,#f9fcff);
+    text-align:center;
+}
+.assessment h2{
+    margin:0 0 8px;
+    color:#075caf;
+    font-size:29px;
+}
+.assessment .lead{
+    max-width:760px;
+    margin:0 auto 20px;
+    color:#465567;
+    font-size:14px;
+}
+.assessment-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:20px;
+}
+.assess-card{
+    padding:16px 12px;
+    border-radius:15px;
+    background:#fff;
+    border:1px solid #d6e6f2;
+}
+.assess-icon{font-size:28px;margin-bottom:5px}
+.assess-card strong{
+    display:block;
+    color:#075caf;
+    font-size:15px;
+}
+.assess-card span{
+    display:block;
+    margin-top:4px;
+    color:#667487;
+    font-size:12px;
+}
+.main-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-width:290px;
+    padding:15px 28px;
+    border-radius:14px;
+    background:linear-gradient(90deg,#0879d8,#075db5);
+    color:#fff;
+    font-size:18px;
+    font-weight:900;
+    text-decoration:none;
+    box-shadow:0 7px 18px rgba(7,128,213,.2);
+    transition:.2s;
+}
+.main-btn:hover{transform:translateY(-2px)}
+.warning{
+    margin:13px 0 0;
+    color:#657487;
+    font-size:12px;
+}
+
+/* FOOTER */
+.footer{
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:18px;
+    align-items:center;
+    padding:22px 34px;
+    color:#fff;
+    background:linear-gradient(110deg,#0758ad,#0878d2);
+    font-size:13px;
+}
+.footer strong{font-size:16px}
+.footer p{margin:3px 0}
+.footer .info{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+.icon{font-size:23px}
+.phone-link{
+    color:#FFD43B;
+    text-decoration:none;
+    font-weight:900;
+    font-size:17px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .header-top{padding:14px 20px;gap:20px}
+    .logo{width:75px!important;height:75px!important;min-width:75px}
+    .brand{gap:12px}
+    .brand-text strong{font-size:16px}
+    .brand-text span{font-size:15px}
+    .nav{gap:8px}
+    .nav a{width:62px;font-size:9px}
+    .nav-icon{width:27px;height:27px}
+    .hero{
+        grid-template-columns:1fr;
+        padding:28px 25px 0;
+        text-align:center;
+    }
+    .subtitle,.hero-note{margin-left:auto;margin-right:auto}
+    .family{justify-content:center}
+    .criteria{grid-template-columns:1fr}
+    .assessment-grid{grid-template-columns:1fr 1fr}
+    .footer{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .header-top{
+        padding:15px 10px 12px;
+        flex-direction:column;
+        gap:14px;
+    }
+    .brand{width:100%;justify-content:center}
+    .logo{width:65px!important;height:65px!important;min-width:65px}
+    .brand-text strong{font-size:14px}
+    .brand-text span{font-size:13px}
+    .nav{width:100%;justify-content:center;gap:2px}
+    .nav a{width:65px;font-size:8px;gap:4px}
+    .nav-icon{width:24px;height:24px}
+    .hero{padding:23px 15px 0}
+    .kicker{font-size:18px}
+    .title{font-size:39px}
+    .subtitle{font-size:16px}
+    .hero-btn{width:100%;max-width:300px;justify-content:center;font-size:16px}
+    .heading h2{font-size:21px}
+    .heading h2:before,.heading h2:after{width:30px;margin:0 6px 6px}
+    .criteria{padding:0 13px 15px}
+    .assessment{
+        margin:8px 13px 18px;
+        padding:20px 13px;
+    }
+    .assessment h2{font-size:23px}
+    .assessment-grid{grid-template-columns:1fr}
+    .main-btn{width:100%;min-width:0;font-size:16px}
+    .footer{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:22px 18px;
+    }
+    .footer .info{justify-content:center}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<header class="header">
+    <div class="header-top">
+        <div class="brand">
+            <img class="logo" src="./logo.jpg" alt="Logo Hội Liên hiệp Phụ nữ Việt Nam">
+            <div class="brand-text">
+                <strong>HỘI LHPN TỈNH ĐỒNG THÁP</strong>
+                <span>HỘI LHPN XÃ PHÚ HỰU</span>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="#">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M3 11.2 12 3l9 8.2v9.3a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-5v6h-5A1.5 1.5 0 0 1 3 20.5v-9.3Z"/>
+                </svg>
+                <span>TRANG CHỦ</span>
+            </a>
+            <a href="#tieu-chi">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm2.1-7.1-.9.9c-.8.7-1.2 1.2-1.2 2.2h-2c0-1.5.5-2.3 1.7-3.4l.8-.8c.4-.4.7-.8.7-1.4A2.2 2.2 0 0 0 12 5.2c-1.2 0-2 .8-2.2 1.9l-1.9-.4C8.2 4.8 9.7 3.3 12 3.3c2.3 0 4.2 1.6 4.2 4 0 1.1-.4 1.9-1.1 2.6Z"/>
+                </svg>
+                <span>TIÊU CHÍ</span>
+            </a>
+            <a href="#huong-dan">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M6 2h8l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V8h4.5M8 11h8M8 14h8M8 17h6"/>
+                </svg>
+                <span>HƯỚNG DẪN</span>
+            </a>
+            <a href="#lien-he">
+                <svg class="nav-icon" viewBox="0 0 24 24">
+                    <path d="M6.6 2.8 9 2l2.2 5.3-2.1 1.5-2.1 1.5a15.5 15.5 0 0 0 6.1 6.1l1.5-2.1L22 15l-.8 2.4c-.5 1.5-1.9 2.5-3.5 2.5C10.6 19.9 4.1 13.4 4.1 6.3c0-1.6 1-3 2.5-3.5Z"/>
+                </svg>
+                <span>LIÊN HỆ</span>
+            </a>
+        </nav>
+    </div>
+    <div class="header-wave"></div>
+</header>
+
+<section class="hero" id="gioi-thieu">
+    <div class="hero-left">
+        <p class="kicker">CHUNG TAY XÂY DỰNG</p>
+        <h1 class="title">
+            <span>GIA ĐÌNH</span>
+            <span>5 KHÔNG – 3 SẠCH – 3 AN</span>
+        </h1>
+        <p class="subtitle">
+            Mỗi gia đình tự đánh giá hôm nay – cùng nhau xây dựng cuộc sống hạnh phúc, văn minh và an toàn hơn.
+        </p>
+        <div class="hero-note">
+            📋 Hãy xem các tiêu chí bên dưới, sau đó thực hiện phiếu <strong>tự đánh giá trực tuyến</strong>.
+            Kết quả sẽ giúp gia đình nhận biết những nội dung đã thực hiện tốt và những nội dung cần cải thiện.
+        </div>
+
+        <!-- THAY LINK BÊN DƯỚI BẰNG LINK PHIẾU TỰ ĐÁNH GIÁ -->
+        <a class="hero-btn"
+           href="DAN_LINK_TU_DANH_GIA_VAO_DAY"
+           target="_blank">
+            ✍️ TỰ ĐÁNH GIÁ NGAY
+        </a>
+    </div>
+
+    <div class="family">
+        <img src="./family.png" alt="Gia đình hạnh phúc">
+    </div>
+</section>
+
+<div class="wave"></div>
+
+<div class="heading" id="tieu-chi">
+    <h2>CÁC TIÊU CHÍ TỰ ĐÁNH GIÁ</h2>
+</div>
+
+<section class="criteria">
+
+    <article class="box five">
+        <div class="boxhead">
+            <div class="num">5</div>
+            <div>
+                <h3>KHÔNG</h3>
+                <small>NỀN TẢNG HẠNH PHÚC</small>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item"><strong>1. Không nghèo</strong><p>Có ý chí vươn lên thoát nghèo, nâng cao mức sống, sử dụng hợp lý các nguồn lực.</p></div>
+            <div class="item"><strong>2. Không bạo lực</strong><p>Các thành viên yêu thương, tôn trọng, chia sẻ, không có hành vi bạo lực gia đình.</p></div>
+            <div class="item"><strong>3. Không vi phạm pháp luật và tệ nạn xã hội</strong><p>Chấp hành pháp luật; không tham gia các tệ nạn xã hội, cờ bạc và hành vi vi phạm pháp luật.</p></div>
+            <div class="item"><strong>4. Không trẻ suy dinh dưỡng và bỏ học</strong><p>Trẻ em được chăm sóc, theo dõi tăng trưởng và đến trường đúng độ tuổi.</p></div>
+            <div class="item"><strong>5. Không lãng phí</strong><p>Thực hành tiết kiệm điện, nước, thực phẩm và thời gian trong sinh hoạt gia đình.</p></div>
+        </div>
+    </article>
+
+    <article class="box clean">
+        <div class="boxhead">
+            <div class="num">3</div>
+            <div>
+                <h3>SẠCH</h3>
+                <small>MÔI TRƯỜNG SỐNG TRONG LÀNH</small>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item"><strong>1. Sạch nhà</strong><p>Nhà ở sạch sẽ, gọn gàng; có nhà tắm, nhà tiêu và công trình nước sinh hoạt hợp vệ sinh.</p></div>
+            <div class="item"><strong>2. Sạch bếp</strong><p>Khu vực nấu nướng sạch sẽ, thông thoáng; sử dụng thực phẩm an toàn, có nguồn gốc rõ ràng.</p></div>
+            <div class="item"><strong>3. Sạch ngõ</strong><p>Giữ gìn vệ sinh chung; không để rác thải, nước đọng; xây dựng không gian xanh – sạch – đẹp.</p></div>
+        </div>
+    </article>
+
+    <article class="box safe">
+        <div class="boxhead">
+            <div class="num">3</div>
+            <div>
+                <h3>AN</h3>
+                <small>AN TÂM VỮNG BƯỚC</small>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item"><strong>1. An toàn</strong><p>Đảm bảo an toàn PCCC, điện, giao thông; phòng chống đuối nước, giữ gìn an ninh trật tự và an toàn trên không gian mạng.</p></div>
+            <div class="item"><strong>2. An tâm</strong><p>Gia đình hòa thuận, có thu nhập ổn định và tích cực tham gia các phong trào tại địa phương.</p></div>
+            <div class="item"><strong>3. An sinh</strong><p>Tham gia bảo hiểm y tế, bảo hiểm tự nguyện; thành viên được quan tâm và chăm sóc sức khỏe.</p></div>
+        </div>
+    </article>
+
+</section>
+
+<section class="assessment" id="huong-dan">
+    <h2>📝 TỰ ĐÁNH GIÁ GIA ĐÌNH</h2>
+    <p class="lead">
+        Người dân chỉ cần chuẩn bị thông tin của hộ gia đình, đọc từng tiêu chí và lựa chọn mức độ phù hợp trong phiếu tự đánh giá trực tuyến.
+    </p>
+
+    <div class="assessment-grid">
+        <div class="assess-card">
+            <div class="assess-icon">🔎</div>
+            <strong>1. Xem tiêu chí</strong>
+            <span>Đọc kỹ 5 Không – 3 Sạch – 3 An</span>
+        </div>
+        <div class="assess-card">
+            <div class="assess-icon">☑️</div>
+            <strong>2. Tự đánh giá</strong>
+            <span>Đánh giá đúng thực tế của gia đình</span>
+        </div>
+        <div class="assess-card">
+            <div class="assess-icon">📊</div>
+            <strong>3. Gửi kết quả</strong>
+            <span>Hoàn thành và gửi phiếu trực tuyến</span>
+        </div>
+    </div>
+
+    <!-- THAY LINK BÊN DƯỚI BẰNG LINK GOOGLE FORM / BIỂU MẪU CỦA BẠN -->
+    <a class="main-btn"
+       href="DAN_LINK_TU_DANH_GIA_VAO_DAY"
+       target="_blank">
+        📝 MỞ PHIẾU TỰ ĐÁNH GIÁ
+    </a>
+
+    <p class="warning">
+        💡 Lưu ý: Vui lòng trả lời theo đúng tình hình thực tế của gia đình để kết quả tự đánh giá có ý nghĩa.
+    </p>
+</section>
+
+<footer class="footer" id="lien-he">
+    <div>
+        <strong>🌸 GIA ĐÌNH HẠNH PHÚC – CỘNG ĐỒNG VĂN MINH</strong>
+        <p>Cùng xây dựng gia đình xanh – sạch – an toàn và phát triển bền vững.</p>
+    </div>
+    <div class="info">
+        <span class="icon">📍</span>
+        <span>Hội LHPN xã Phú Hựu, tỉnh Đồng Tháp</span>
+    </div>
+    <div class="info">
+        <span class="icon">☎</span>
+        <a href="tel:0912405878" class="phone-link">0912 405 878</a>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
