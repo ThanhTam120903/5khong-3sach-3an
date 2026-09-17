@@ -580,11 +580,27 @@ body{
     </div>
 
     <!-- THAY LINK BÊN DƯỚI BẰNG LINK GOOGLE FORM / BIỂU MẪU CỦA BẠN -->
-    <a class="main-btn"
-       href="DAN_LINK_TU_DANH_GIA_VAO_DAY"
-       target="_blank">
-        📝 MỞ PHIẾU TỰ ĐÁNH GIÁ
-    </a>
+    <button class="main-btn" onclick="hienPhieu()">
+    📝 MỞ PHIẾU TỰ ĐÁNH GIÁ
+</button>
+
+<div id="phieuTuDanhGia" style="display:none; margin-top:20px;">
+    <img src="./tu-danh-gia.jpg"
+         alt="Phiếu tự đánh giá"
+         style="width:100%; max-width:900px; height:auto; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,.15);">
+</div>
+
+<script>
+function hienPhieu() {
+    const phieu = document.getElementById("phieuTuDanhGia");
+
+    if (phieu.style.display === "none") {
+        phieu.style.display = "block";
+    } else {
+        phieu.style.display = "none";
+    }
+}
+</script>
 
     <p class="warning">
         💡 Lưu ý: Vui lòng trả lời theo đúng tình hình thực tế của gia đình để kết quả tự đánh giá có ý nghĩa.
